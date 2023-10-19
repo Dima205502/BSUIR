@@ -1,1 +1,0 @@
-C:\PPOIS 1_lab\RectangleTest\x64\Debug\RectangleTest.vcxproj.CopyComplete
