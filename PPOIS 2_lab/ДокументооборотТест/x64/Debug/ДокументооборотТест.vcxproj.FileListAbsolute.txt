@@ -1,4 +1,0 @@
-C:\PPOIS_2lab\ДокументооборотТест\x64\Debug\ДокументооборотТест.vcxproj.CopyComplete
-C:\PPOIS_2lab\ДокументооборотТест\x64\Debug\ДокументооборотТест.exe
-C:\PPOIS_2lab\ДокументооборотТест\x64\Debug\gtest.pdb
-C:\PPOIS_2lab\ДокументооборотТест\x64\Debug\gtest_main.pdb
