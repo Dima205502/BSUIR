@@ -13,7 +13,11 @@ def create_geo_coordinate():
     print("Enter geographical longitude")
     geo_longitude = float(input())
 
-    return GeoCoordinate(geo_latitude, geo_longitude)
+    try:
+        return GeoCoordinate(geo_latitude, geo_longitude)
+    except ValueError as e:
+        print(f"Error: {e}")
+        return create_geo_coordinate()
 
 
 def create_attraction():
@@ -26,8 +30,11 @@ def create_attraction():
     print("Enter date building ")
     date_of_building = input()
 
-    return Attraction(namings, geo_coordinate, int(date_of_building))
-
+    try:
+        return Attraction(namings, geo_coordinate, int(date_of_building))
+    except ValueError as e:
+        print(f"Error: {e}")
+        return create_attraction()
 
 def create_photo():
     print("Enter attraction on this photo:\n")
@@ -41,7 +48,12 @@ def create_photo():
 
     print("Enter beautiful level for photo: ")
     beautiful_level = int(input())
-    return Photo(attractions, height, width, beautiful_level)
+
+    try:
+        return Photo(attractions, height, width, beautiful_level)
+    except ValueError as e:
+        print(f"Error: {e}")
+        return create_photo()
 
 
 def create_path():
@@ -95,8 +107,8 @@ if __name__ == "__main__":
 
     while True:
         print("1 Photo\n")
-        print(" 1.2) Create photo\n")
-        print(" 1.1) Show all photo\n")
+        print(" 1.1) Create photo\n")
+        print(" 1.2) Show all photo\n")
         print("2 Attraction\n")
         print(" 2.1) Create attraction\n")
         print(" 2.2) Show all attraction\n")

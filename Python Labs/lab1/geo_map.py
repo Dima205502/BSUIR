@@ -7,21 +7,26 @@ class GeoMap:
         self.coordinate_to_naming = coordinate_to_naming
 
     def add_attraction(self, attraction: Attraction):
+
         coordinate = attraction.coordinate
         naming = attraction.naming
 
         if coordinate in self.coordinate_to_naming:
-            raise ValueError("Coordinate already exist")
+            print("Coordinate already exist")
+            return
 
         if naming in self.coordinate_to_naming.values():
-            raise ValueError("Naming already exist")
+            print("Naming already exist")
+            return
 
         self.coordinate_to_naming[coordinate] = naming
 
     def remove_attraction(self, attraction: Attraction):
+
         coordinate = attraction.coordinate
 
         if coordinate is not self.coordinate_to_naming:
-            raise ValueError("Such a place does not exist")
+            print("Such a place does not exist")
+            return
 
         del self.coordinate_to_naming[coordinate]

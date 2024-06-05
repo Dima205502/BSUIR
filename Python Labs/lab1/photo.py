@@ -6,11 +6,11 @@ class Photo:
 
         if height <= 0 or width <= 0:
             raise ValueError("Negative size")
-
         self.attraction = attraction
         self.height = height
         self.width = width
         self.beautiful_level = beautiful_level
+
 
     def browsing_photo(self):
         return self.attraction
